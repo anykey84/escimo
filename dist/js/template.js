@@ -1,21 +1,15 @@
 "use strict";
 
-var News = React.createClass({ displayName: "News",
-  render: function render() {
-    return React.createElement("div", { className: "news" }, "К сожалению, новостей нет.");
-  }
-});
-
-var Comments = React.createClass({ displayName: "Comments",
-  render: function render() {
-    return React.createElement("div", { className: "comments" }, "Нет новостей - комментировать нечего");
-  }
+var Header = React.createClass({ displayName: "Header",
+    render: function render() {
+        return React.createElement("header", { className: "flex-between" }, React.createElement("div", { className: "logo" }, React.createElement("div", null, "Escimo"), React.createElement("div", { className: "flex-between" }, React.createElement("p", null, "ask"), React.createElement("p", null, "me"), React.createElement("p", null, "more"))));
+    }
 });
 
 var App = React.createClass({ displayName: "App",
-  render: function render() {
-    return React.createElement("div", { className: "app" }, "Всем привет, я компонент App! Я умею отображать новости.", React.createElement(News, null), React.createElement(Comments, null));
-  }
+    render: function render() {
+        return React.createElement(Header, null);
+    }
 });
 
-ReactDOM.render(React.createElement(App, null), document.getElementsByTagName('body')[0]);
+ReactDOM.render(React.createElement(App, null), document.getElementById('container'));

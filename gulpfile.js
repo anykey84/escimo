@@ -1,6 +1,6 @@
 const gulp = require('gulp'),
     webserver = require('gulp-webserver'),
-    sass = require('gulp-less'),
+    less = require('gulp-less'),
     react = require('gulp-react'),
     babel = require('gulp-babel');
 
@@ -18,7 +18,7 @@ gulp.task('html', function() {
         .pipe(gulp.dest('dist/'));
 });
 
-gulp.task('sass', function() {
+gulp.task('less', function() {
     gulp.src('development/less/**/*')
         .pipe(less())
         .pipe(gulp.dest('dist/css/'));
@@ -29,12 +29,11 @@ gulp.task('img', function() {
         .pipe(gulp.dest('dist/img/'));
 });
 
+gulp.task('fonts', function() {
+    gulp.src('development/fonts/**/*')
+        .pipe(gulp.dest('dist/fonts/'));
+});
 
-// gulp.task('fonts', function() {
-//     gulp.src('builds/development/fonts/**/*')
-//         .pipe(gulp.dest('builds/dist/fonts/'));
-// });
-//
 gulp.task('watch', function() {
     gulp.watch('development/js/**/*.jsx', ['jsx']);
     gulp.watch('development/less/**/*.less', ['less']);
@@ -47,6 +46,8 @@ gulp.task('vendor', function() {
         .pipe(gulp.dest('dist/js/vendor/'));
     gulp.src('node_modules/react-dom/dist/react-dom.min.js')
         .pipe(gulp.dest('dist/js/vendor/'));
+    gulp.src('vendor/uikit/css/uikit.min.css')
+        .pipe(gulp.dest('dist/css/'));
 
 
 });
@@ -65,6 +66,7 @@ gulp.task('default', [
     'jsx',
     'html',
     'vendor',
+    'less',
     'watch',
     'webserver'
 ]);

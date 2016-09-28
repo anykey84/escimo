@@ -1,36 +1,21 @@
-const News = React.createClass({
-  render: function() {
-    return (
-      <div className="news">
-        К сожалению, новостей нет.
-      </div>
-    );
-  }
-});
-
-const Comments = React.createClass({
-  render: function() {
-    return (
-      <div className="comments">
-        Нет новостей - комментировать нечего
-      </div>
-    );
-  }
-});
+const Header = React.createClass({
+    render: function() {
+        return (
+            <header className="flex-between">
+                <div className="logo">
+                    <div>Escimo</div>
+                    <div className="flex-between"><p>ask</p><p>me</p><p>more</p></div>
+                </div>
+            </header>
+        )
+    }
+})
 
 const App = React.createClass({
-  render: function() {
-    return (
-      <div className="app">
-        Всем привет, я компонент App! Я умею отображать новости.
-        <News />
-        <Comments />
-      </div>
-    );
-  }
+    render: function() {
+        return (<Header/>);
+    }
 });
 
 ReactDOM.render(
-  <App />,
-  document.getElementsByTagName('body')[0]
-);
+    <App/>, document.getElementById('container'));
