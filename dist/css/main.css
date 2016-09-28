@@ -180,6 +180,13 @@ td,
 th {
   padding: 0;
 }
+input[type=text]:focus {
+  outline: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
 /** Ultra Light */
 @font-face {
   font-family: "San Francisco";
@@ -236,6 +243,11 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.flex-between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .flex-column-center {
   display: flex;
   flex-direction: column;
@@ -243,6 +255,7 @@ body {
 }
 header {
   margin-top: 38px;
+  margin-bottom: 32px;
 }
 header .logo div:first-child {
   font-size: 22px;
@@ -254,5 +267,32 @@ header .logo div:last-child {
   color: #67687a;
 }
 header .logo div:last-child p {
-  margin-top: 3px;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+header .search-or-ask {
+  margin-right: auto;
+  margin-left: 11%;
+}
+header .search-or-ask input[name=ask] {
+  width: 390px;
+  height: 32px;
+  border-radius: 16px 0 0 16px;
+  border: 0;
+  background-color: #efefef;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+header .search-or-ask input[type=submit] {
+  width: 166px;
+  height: 32px;
+  border-radius: 16px;
+  background-image: linear-gradient(to top, #4167e8, #53a0fd 48%, #7cd1f9);
+  border: 0;
+  color: #fff;
+  margin-left: -16px;
+}
+header .login-button a {
+  font-size: 16px;
+  color: #4a90e2;
 }
