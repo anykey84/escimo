@@ -232,6 +232,9 @@ body {
   font-family: 'San Francisco', sans-serif;
 }
 #container {
+  width: 100%;
+}
+.container {
   width: 1170px;
   margin-left: 15px;
   margin-right: 15px;
@@ -242,6 +245,10 @@ body {
 .flex-between {
   display: flex;
   justify-content: space-between;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
 }
 .flex-between-center {
   display: flex;
@@ -254,8 +261,10 @@ body {
   align-items: center;
 }
 header {
-  margin-top: 38px;
-  margin-bottom: 32px;
+  width: 100%;
+  padding-top: 38px;
+  padding-bottom: 32px;
+  border-bottom: solid 1px rgba(151, 151, 151, 0.2);
 }
 header .logo div:first-child {
   font-size: 22px;
