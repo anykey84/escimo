@@ -22,13 +22,26 @@ const Header = React.createClass({
             </header>
         )
     }
-})
+});
+
+const Maincontent = React.createClass({
+    render: function() {
+        return (
+            <div className="container maincontent"></div>
+        );
+    }
+});
 
 const App = React.createClass({
     render: function() {
-        return (<Header/>);
+        return (
+          <div id="container">
+            <Header />
+            <Maincontent />
+          </div>
+      );
     }
 });
 
 ReactDOM.render(
-    <App/>, document.getElementById('container'));
+    <App/>, document.getElementsByTagName('body')[0]);

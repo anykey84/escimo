@@ -1,5 +1,13 @@
 @import "normalize.less";
-@import "../fonts/sf-webfont.less";
+@import "sf-webfont.less";
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../fonts/fontawesome-webfont.woff2") format('woff2'), url("../fonts/fontawesome-webfont.woff") format("woff"), url("../fonts/fontawesome-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @color-blue: #4a90e2;
 @color-grey: #67687a;
 @color-light-grey: #efefef;
@@ -68,7 +76,7 @@ header {
             color: @color-grey;
 
             p {
-                margin-top: 4px;
+                margin-top: 2px;
                 margin-bottom: 0;
             }
         }

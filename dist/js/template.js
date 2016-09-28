@@ -6,10 +6,16 @@ var Header = React.createClass({ displayName: "Header",
     }
 });
 
-var App = React.createClass({ displayName: "App",
+var Maincontent = React.createClass({ displayName: "Maincontent",
     render: function render() {
-        return React.createElement(Header, null);
+        return React.createElement("div", { className: "container maincontent" });
     }
 });
 
-ReactDOM.render(React.createElement(App, null), document.getElementById('container'));
+var App = React.createClass({ displayName: "App",
+    render: function render() {
+        return React.createElement("div", { id: "container" }, React.createElement(Header, null), React.createElement(Maincontent, null));
+    }
+});
+
+ReactDOM.render(React.createElement(App, null), document.getElementsByTagName('body')[0]);

@@ -39,6 +39,7 @@ gulp.task('watch', function() {
     gulp.watch('development/less/**/*.less', ['less']);
     gulp.watch('development/**/*.html', ['html']);
     gulp.watch('development/img/**/*', ['img']);
+    gulp.watch('development/fonts/**/*', ['fonts']);
 });
 
 gulp.task('vendor', function() {
@@ -68,5 +69,6 @@ gulp.task('default', [
     'vendor',
     'less',
     'watch',
+    'fonts',
     'webserver'
 ]);
