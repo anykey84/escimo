@@ -67,6 +67,7 @@ gulp.task('default', [
     'jsx',
     'html',
     'vendor',
+    'img',
     'less',
     'watch',
     'fonts',

@@ -24,10 +24,71 @@ const Header = React.createClass({
     }
 });
 
+let playlist = [
+    {
+        name: 'video1',
+        source: 'youtube',
+        id: 'An2jkWiVna8'
+    }, {
+        name: 'video2',
+        source: 'youtube',
+        id: 'd_1s-e1wn6k'
+    }, {
+        name: 'video3',
+        source: 'youtube',
+        id: 'U_MXFP_kguA'
+    }
+]
+
+const Leftcontent = React.createClass({
+    render: function() {
+        return (
+
+            <div className="leftcontent">
+                <div className="video-playlist">
+                    <div className="video-box">
+                        <iframe className="visible" width="729px" height="410px" src="https://www.youtube.com/embed/An2jkWiVna8?controls=0" frameborder="0" allowfullscreen></iframe>
+                        {/* <iframe width="729px" height="410px" src="https://www.youtube.com/embed/d_1s-e1wn6k?controls=0" frameborder="0" allowfullscreen></iframe>
+                        <iframe width="729px" height="410px" src="https://www.youtube.com/embed/U_MXFP_kguA?controls=0" frameborder="0" allowfullscreen></iframe>*/}
+                    </div>
+                    <div className="video-title flex-between">
+                        <div className="userpic">
+                            <img src="img/person.png"/>
+                        </div>
+                        <div className="video-info">
+                            <div className="title">How to make this desert ?</div>
+                            <div className="name-and-views">
+                              <a href="#">Semenovich</a>
+                              <p>921, 000 views</p>
+                            </div>
+                        </div>
+                        <button className="btn video-answer-button">Answer</button>
+                    </div>
+                    <div className="video-tags"></div>
+                </div>
+            </div>
+
+        );
+    }
+});
+
+const Rightcontent = React.createClass({
+    render: function() {
+        return (
+
+            <div className="rightcontent"></div>
+
+        );
+    }
+});
+
 const Maincontent = React.createClass({
     render: function() {
         return (
-            <div className="container maincontent"></div>
+            <div className="container maincontent">
+                <Leftcontent/>
+                <Rightcontent/>
+            </div>
         );
     }
 });
@@ -35,11 +96,11 @@ const Maincontent = React.createClass({
 const App = React.createClass({
     render: function() {
         return (
-          <div id="container">
-            <Header />
-            <Maincontent />
-          </div>
-      );
+            <div id="container" className="flex-column-center">
+                <Header/>
+                <Maincontent/>
+            </div>
+        );
     }
 });
 
