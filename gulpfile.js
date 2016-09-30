@@ -2,7 +2,8 @@ const gulp = require('gulp'),
     webserver = require('gulp-webserver'),
     less = require('gulp-less'),
     react = require('gulp-react'),
-    babel = require('gulp-babel');
+    babel = require('gulp-babel'),
+    autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('jsx', function() {
     gulp.src('development/js/**/*.jsx')
@@ -19,8 +20,14 @@ gulp.task('html', function() {
 });
 
 gulp.task('less', function() {
-    gulp.src('development/less/**/*')
-        .pipe(less())
+    gulp.src('development/less/main.less')
+        .pipe(less({
+          compress: true
+        }))
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(gulp.dest('dist/css/'));
 });
 
@@ -47,10 +54,6 @@ gulp.task('vendor', function() {
         .pipe(gulp.dest('dist/js/vendor/'));
     gulp.src('node_modules/react-dom/dist/react-dom.min.js')
         .pipe(gulp.dest('dist/js/vendor/'));
-    gulp.src('vendor/uikit/css/uikit.min.css')
-        .pipe(gulp.dest('dist/css/'));
-
-
 });
 
 
