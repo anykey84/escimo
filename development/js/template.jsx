@@ -48,62 +48,63 @@ const Leftcontent = React.createClass({
                 <div className="video-playlist">
                     <div className="video-box">
                         <iframe className="visible" width="729px" height="410px" src="https://www.youtube.com/embed/An2jkWiVna8?controls=0" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div className="video-title flex-between">
-                        <div className="userpic">
-                            <img src="img/person.png"/>
-                        </div>
-                        <div className="video-info">
-                            <div className="title">How to make this desert ?</div>
-                            <div className="name-and-views">
-                                <a href="#">Semenovich</a>
-                                <p>921, 000 views</p>
+                        <div className="video-title flex-between">
+                            <div className="userpic">
+                                <img src="img/person.png"/>
                             </div>
-                        </div>
+                            <div className="video-info">
+                                <div className="title">How to make this desert ?</div>
+                                <div className="name-and-views">
+                                    <a href="#">Semenovich</a>
+                                    <p>921, 000 views</p>
+                                </div>
+                            </div>
 
-                        <button className="btn video-answer-button">Answer</button>
-                    </div>
-                    <div className="video-tags">
-                        <div className="tags-and-more">
-                            <div className="tags">
-                                <a href="#">#easy</a>
-                                <a href="#">#not_easy</a>
-                                <a href="#">#hard</a>
-                                <a href="#">
-                                    <i className="fa fa-plus-circle" aria-hidden="true"></i>
-                                </a>
+                            <button className="btn video-answer-button">Answer</button>
+                        </div>
+                        <div className="video-tags">
+                            <div className="tags-and-more">
+                                <div className="tags">
+                                    <a href="#">#easy</a>
+                                    <a href="#">#not_easy</a>
+                                    <a href="#">#hard</a>
+                                    <a href="#">
+                                        <i className="fa fa-plus-circle" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div className="video-show-more">show more</div>
                             </div>
-                            <div className="video-show-more">show more</div>
+                            <div className="video-share">
+                                <a href="#">
+                                    <i className="fa fa-share-alt" aria-hidden="true"></i>Share</a>
+                                <a href="#">
+                                    <i className="fa fa-heart-o" aria-hidden="true"></i>2,5 k</a>
+                            </div>
                         </div>
-                        <div className="video-share">
-                            <a href="#">
-                                <i className="fa fa-share-alt" aria-hidden="true"></i>Share</a>
-                            <a href="#">
-                                <i className="fa fa-heart-o" aria-hidden="true"></i>2,5 k</a>
+                        <div className="video-comments">
+                            <a href="#">view all 18 comments</a>
+                            <div className="video-comment">
+                                serpukin
+                                <a href="#">#easy</a>
+                                Deciphering Marketing Lingo For Small Business Owners
+                            </div>
+                            <div className="video-comment">
+                                mothermilk
+                                <a href="#">@serpukin</a>
+                                Enlightenment Is Not Just One State
+                            </div>
+                            <div className="video-comment">
+                                serpukin
+                                <a href="#">@mothermilk</a>
+                                New Ideas For A Low Cost Vacation On Water
+                            </div>
+                        </div>
+                        <div className="video-add-comment">
+                            <a href="#">Add comment</a>
+                            <div>0/500</div>
                         </div>
                     </div>
-                    <div className="video-comments">
-                        <a href="#">view all 18 comments</a>
-                        <div className="video-comment">
-                            serpukin
-                            <a href="#">#easy</a>
-                            Deciphering Marketing Lingo For Small Business Owners
-                        </div>
-                        <div className="video-comment">
-                            mothermilk
-                            <a href="#">@serpukin</a>
-                            Enlightenment Is Not Just One State
-                        </div>
-                        <div className="video-comment">
-                            serpukin
-                            <a href="#">@mothermilk</a>
-                            New Ideas For A Low Cost Vacation On Water
-                        </div>
-                    </div>
-                    <div className="video-add-comment">
-                        <a href="#">Add comment</a>
-                        <div>0/500</div>
-                    </div>
+
                     <div className="video-answwers">
                         <div className="video-box">
                             <iframe className="visible" width="729px" height="410px" src="https://www.youtube.com/embed/5bEFE6Mw-fM?controls=0" frameborder="0" allowfullscreen></iframe>
@@ -127,9 +128,11 @@ const Rightcontent = React.createClass({
                 <div className="simillar-questions">
                     <h2>Simillar questions</h2>
                     <div className="simillar-question">
-                        <div className="thumb">
-                            <img src="img/thumb.jpg" alt=""></img>
-                        </div>
+                        <a href="#">
+                            <div className="thumb">
+                                <img src="img/thumb.jpg" alt=""></img>
+                            </div>
+                        </a>
                         <div className="question-info">
                             <h3>Home Audio Recording For Everyone ?</h3>
                             <div className="views">123, 825 views</div>
@@ -141,9 +144,11 @@ const Rightcontent = React.createClass({
 
                     </div>
                     <div className="simillar-question">
-                        <div className="thumb">
-                            <img src="img/thumb.jpg" alt=""></img>
-                        </div>
+                        <a href="#">
+                            <div className="thumb">
+                                <img src="img/thumb.jpg" alt=""></img>
+                            </div>
+                        </a>
                         <div className="question-info">
                             <h3>Home Audio Recording For Everyone ?</h3>
                             <div className="views">123, 825 views</div>
@@ -155,9 +160,11 @@ const Rightcontent = React.createClass({
 
                     </div>
                     <div className="simillar-question">
-                        <div className="thumb">
-                            <img src="img/thumb.jpg" alt=""></img>
-                        </div>
+                        <a href="#">
+                            <div className="thumb">
+                                <img src="img/thumb.jpg" alt=""></img>
+                            </div>
+                        </a>
                         <div className="question-info">
                             <h3>Home Audio Recording For Everyone ?</h3>
                             <div className="views">123, 825 views</div>
@@ -169,9 +176,11 @@ const Rightcontent = React.createClass({
 
                     </div>
                     <div className="simillar-question">
-                        <div className="thumb">
-                            <img src="img/thumb.jpg" alt=""></img>
-                        </div>
+                        <a href="#">
+                            <div className="thumb">
+                                <img src="img/thumb.jpg" alt=""></img>
+                            </div>
+                        </a>
                         <div className="question-info">
                             <h3>Home Audio Recording For Everyone ?</h3>
                             <div className="views">123, 825 views</div>
@@ -182,7 +191,7 @@ const Rightcontent = React.createClass({
                         </div>
 
                     </div>
-                    <div className="more-questions">More questions</div>
+                    <a href="#" className="more-questions">More questions</a>
                 </div>
             </div>
 
