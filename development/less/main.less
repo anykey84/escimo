@@ -1,24 +1,15 @@
-@import "uikit/uikit.less";
 @import "font-awesome/font-awesome.less";
-
 /* ========================================================================
    Custom fonts
  ========================================================================== */
-@import "sf-webfont.less";
-
-
-///////////////////////   Variables ////////////////////////////////////////
+@import "sf-webfont.less"; ///////////////////////   Variables ////////////////////////////////////////
 @color-blue: #4a90e2;
 @color-grey: #67687a;
 @color-light-grey: #efefef;
-@color-grey-line: rgba(151, 151, 151, 0.2);
-////////////////////////////////////////////////////////////////////////////
-
-
+@color-grey-line: rgba(151, 151, 151, 0.2); ////////////////////////////////////////////////////////////////////////////
 /* ========================================================================
    Custom styles
  ========================================================================== */
-#container,
 body,
 html {
     height: 100%;
@@ -28,20 +19,21 @@ body {
     font-size: 14px;
     font-family: 'San Francisco', sans-serif;
     color: @color-grey;
+
+    & > div > hr {
+        height: 1px;
+        background-color: @color-grey-line;
+        margin: 0;
+        border: 0;
+    }
 }
 
 #container {
     width: 100%;
 }
 
-.container {
-    width: 1170px;
-    margin-left: 15px;
-    margin-right: 15px;
-}
-
-button{
-  border: 0;
+button {
+    border: 0;
 }
 
 .flex {
@@ -70,16 +62,24 @@ button{
     align-items: center;
 }
 
+.btn,
+input {
+    &:active,
+    &:focus {
+        outline: 0 !important;
+    }
+}
+
 header {
     width: 100%;
     padding-top: 38px;
     padding-bottom: 32px;
-    border-bottom: solid 1px @color-grey-line;
 
     .logo {
         div:first-child {
             font-size: 22px;
             font-weight: 700;
+            line-height: 20px;
             color: @color-blue;
         }
 
@@ -88,16 +88,15 @@ header {
             color: @color-grey;
 
             p {
+                display: inline;
                 margin-top: 2px;
                 margin-bottom: 0;
+                margin-right: 5.5px;
             }
         }
     }
 
     .search-or-ask {
-        margin-right: auto;
-        margin-left: 11%;
-
         input[name=ask] {
             width: 390px;
             height: 32px;
@@ -116,15 +115,22 @@ header {
             border: 0;
             color: #fff;
             margin-left: -16px;
-            &:hover, &:active{
-              background-image: linear-gradient(to bottom, #4167e8, #53a0fd 48%, #7cd1f9);
+
+            &:active,
+            &:hover {
+                background-image: linear-gradient(to bottom, #4167e8, #53a0fd 48%, #7cd1f9);
             }
         }
     }
 
-    .login-button a {
-        font-size: 16px;
-        color: @color-blue;
+    .login-button {
+        text-align: right;
+
+        a {
+            font-size: 16px;
+            color: @color-blue;
+            line-height: 32px;
+        }
     }
 }
 
@@ -133,13 +139,14 @@ header {
 
     .leftcontent {
         border-right: solid 1px @color-grey-line;
+        padding-left: 0;
 
         & > * {
-            margin-right: 24px;
+            //margin-right: 24px;
         }
-        flex-basis: 65%;
-        display: flex;
-        flex-direction: column;
+        //flex-basis: 65%;
+        //display: flex;
+        //flex-direction: column;
         padding-top: 39px;
 
         .video-box {
@@ -166,27 +173,31 @@ header {
                 }
             }
 
-            .video-info{
-              margin-right: auto;
-              margin-left: 17px;
-              .title{
-                font-size: 22px;
-                font-weight: 700;
-                color: @color-grey;
-                line-height: 24px;
-              }
-              .name-and-views{
-                margin-top: 2px;
-                a{
-                  font-size: 14px;
-                  color: @color-blue;
+            .video-info {
+                margin-right: auto;
+                margin-left: 17px;
+
+                .title {
+                    font-size: 22px;
+                    font-weight: 700;
+                    color: @color-grey;
+                    line-height: 24px;
                 }
-                p{
-                  display: inline;
-                  margin-left: 11px;
-                  font-size: 14px;
+
+                .name-and-views {
+                    margin-top: 2px;
+
+                    a {
+                        font-size: 14px;
+                        color: @color-blue;
+                    }
+
+                    p {
+                        display: inline;
+                        margin-left: 11px;
+                        font-size: 14px;
+                    }
                 }
-              }
             }
 
             .video-answer-button {
@@ -198,14 +209,72 @@ header {
                 line-height: 32px;
                 font-size: 16px;
                 color: #fff;
-                &:hover, &:active{
-                  background-image: linear-gradient(to top, #b4ec51, #58cf29);
+
+                &:active,
+                &:hover {
+                    background-image: linear-gradient(to top, #b4ec51, #58cf29);
                 }
             }
         }
     }
 
     .rightcontent {
-        flex-basis: 35%;
+        .simillar-questions {
+            h2 {
+                font-size: 22px;
+                font-weight: 700;
+                margin-bottom: 30px;
+            }
+
+            .simillar-question {
+                margin-bottom: 20px;
+
+                .thumb {
+                    display: inline-block;
+                    width: 166px;
+                    height: 115px;
+                    opacity: 0.2;
+                    border-radius: 3px;
+                    overflow: hidden;
+
+                    img {
+                        max-width: 100%;
+                        max-height: auto;
+                    }
+                }
+
+                .question-info {
+                    margin-left: 31px;
+                    display: inline-block;
+                    width: 153px;
+                    vertical-align: top;
+
+                    h3 {
+                        margin-top: 0;
+                        font-size: 16px;
+                        font-weight: 700;
+                    }
+
+                    .views {
+                        display: inline-block;
+                        width: 153px;
+                        font-size: 14px;
+                    }
+
+                    .author {
+                        display: inline-block;
+                        margin-top: 8px;
+                        font-size: 16px;
+
+                        img {
+                            height: 26px;
+                            width: 26px;
+                            border-radius: 50%;
+                            margin-right: 11px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

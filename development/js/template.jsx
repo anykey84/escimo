@@ -1,25 +1,25 @@
 const Header = React.createClass({
     render: function() {
         return (
-            <header className="flex-center">
-                <div className="container flex-between-center">
-                    <div className="logo">
+            <div className="container">
+                <header className="row">
+                    <div className="logo col-md-2">
                         <div>Escimo</div>
-                        <div className="flex-between">
+                        <div>
                             <p>ask</p>
                             <p>me</p>
                             <p>more</p>
                         </div>
                     </div>
-                    <form className="search-or-ask" name="search-or-ask">
+                    <form className="search-or-ask col-md-6" name="search-or-ask">
                         <input type="text" name="ask" placeholder="search or ask"/>
                         <input type="submit" className="btn" value="Ask a Question"/>
                     </form>
-                    <div className="login-button">
+                    <div className="login-button col-md-4">
                         <a href="#">Login</a>
                     </div>
-                </div>
-            </header>
+                </header>
+            </div>
         )
     }
 });
@@ -44,7 +44,7 @@ const Leftcontent = React.createClass({
     render: function() {
         return (
 
-            <div className="leftcontent">
+            <div className="leftcontent col-md-8">
                 <div className="video-playlist">
                     <div className="video-box">
                         <iframe className="visible" width="729px" height="410px" src="https://www.youtube.com/embed/An2jkWiVna8?controls=0" frameborder="0" allowfullscreen></iframe>
@@ -123,63 +123,67 @@ const Rightcontent = React.createClass({
     render: function() {
         return (
 
-            <div className="rightcontent">
-              <div className="simillar-questions">
-                <h2>Simillar questions</h2>
-                <div className="simillar-question">
-                  <div className="thumb">
-                    <img src="img/thumb.jpg" alt=""></img>
-                  </div>
-                  <div className="question-info">
-                    <h3>Home Audio Recording For Everyone ?</h3>
-                  </div>
-                  <div class="views">123, 825 views</div>
-                  <a href="#" className="author">
-                    <img src="img/person.png" alt="" />
-                    Jackson Garner
-                  </a>
+            <div className="rightcontent col-md-4">
+                <div className="simillar-questions">
+                    <h2>Simillar questions</h2>
+                    <div className="simillar-question">
+                        <div className="thumb">
+                            <img src="img/thumb.jpg" alt=""></img>
+                        </div>
+                        <div className="question-info">
+                            <h3>Home Audio Recording For Everyone ?</h3>
+                            <div className="views">123, 825 views</div>
+                            <a href="#" className="author">
+                                <img src="img/person.png" alt=""/>
+                                Jackson Garner
+                            </a>
+                        </div>
+
+                    </div>
+                    <div className="simillar-question">
+                        <div className="thumb">
+                            <img src="img/thumb.jpg" alt=""></img>
+                        </div>
+                        <div className="question-info">
+                            <h3>Home Audio Recording For Everyone ?</h3>
+                            <div className="views">123, 825 views</div>
+                            <a href="#" className="author">
+                                <img src="img/person.png" alt=""/>
+                                Jackson Garner
+                            </a>
+                        </div>
+
+                    </div>
+                    <div className="simillar-question">
+                        <div className="thumb">
+                            <img src="img/thumb.jpg" alt=""></img>
+                        </div>
+                        <div className="question-info">
+                            <h3>Home Audio Recording For Everyone ?</h3>
+                            <div className="views">123, 825 views</div>
+                            <a href="#" className="author">
+                                <img src="img/person.png" alt=""/>
+                                Jackson Garner
+                            </a>
+                        </div>
+
+                    </div>
+                    <div className="simillar-question">
+                        <div className="thumb">
+                            <img src="img/thumb.jpg" alt=""></img>
+                        </div>
+                        <div className="question-info">
+                            <h3>Home Audio Recording For Everyone ?</h3>
+                            <div className="views">123, 825 views</div>
+                            <a href="#" className="author">
+                                <img src="img/person.png" alt=""/>
+                                Jackson Garner
+                            </a>
+                        </div>
+
+                    </div>
+                    <div className="more-questions">More questions</div>
                 </div>
-                <div className="simillar-question">
-                  <div className="thumb">
-                    <img src="img/thumb.jpg" alt=""></img>
-                  </div>
-                  <div className="question-info">
-                    <h3>Home Audio Recording For Everyone ?</h3>
-                  </div>
-                  <div class="views">123, 825 views</div>
-                  <a href="#" className="author">
-                    <img src="img/person.png" alt="" />
-                    Jackson Garner
-                  </a>
-                </div>
-                <div className="simillar-question">
-                  <div className="thumb">
-                    <img src="img/thumb.jpg" alt=""></img>
-                  </div>
-                  <div className="question-info">
-                    <h3>Home Audio Recording For Everyone ?</h3>
-                  </div>
-                  <div class="views">123, 825 views</div>
-                  <a href="#" className="author">
-                    <img src="img/person.png" alt="" />
-                    Jackson Garner
-                  </a>
-                </div>
-                <div className="simillar-question">
-                  <div className="thumb">
-                    <img src="img/thumb.jpg" alt=""></img>
-                  </div>
-                  <div className="question-info">
-                    <h3>Home Audio Recording For Everyone ?</h3>
-                  </div>
-                  <div class="views">123, 825 views</div>
-                  <a href="#" className="author">
-                    <img src="img/person.png" alt="" />
-                    Jackson Garner
-                  </a>
-                </div>
-                <div className="more-questions">More questions</div>
-              </div>
             </div>
 
         );
@@ -189,7 +193,7 @@ const Rightcontent = React.createClass({
 const Maincontent = React.createClass({
     render: function() {
         return (
-            <div className="container maincontent">
+            <div className="container maincontent uk-grid data-uk-grid-margin">
                 <Leftcontent/>
                 <Rightcontent/>
             </div>
@@ -211,10 +215,18 @@ const Footer = React.createClass({
                         </div>
                     </div>
                     <ul>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">About US</a></li>
-                        <li><a href="#">Press</a></li>
-                        <li><a href="#">Blog</a></li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#">About US</a>
+                        </li>
+                        <li>
+                            <a href="#">Press</a>
+                        </li>
+                        <li>
+                            <a href="#">Blog</a>
+                        </li>
                     </ul>
                 </div>
             </footer>
@@ -225,8 +237,9 @@ const Footer = React.createClass({
 const App = React.createClass({
     render: function() {
         return (
-            <div id="container" className="flex-column-center">
+            <div>
                 <Header/>
+                <hr/>
                 <Maincontent/>
                 <Footer/>
             </div>

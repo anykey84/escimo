@@ -31,6 +31,11 @@ gulp.task('less', function() {
         .pipe(gulp.dest('dist/css/'));
 });
 
+gulp.task('css', function() {
+    gulp.src('development/less/**/*.css')
+        .pipe(gulp.dest('dist/css/'));
+});
+
 gulp.task('img', function() {
     gulp.src('development/img/**/*')
         .pipe(gulp.dest('dist/img/'));
@@ -72,6 +77,7 @@ gulp.task('default', [
     'vendor',
     'img',
     'less',
+    'css',
     'watch',
     'fonts',
     'webserver'
