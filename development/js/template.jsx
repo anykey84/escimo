@@ -62,19 +62,19 @@ const Leftcontent = React.createClass({
 
                             <button className="btn video-answer-button">Answer</button>
                         </div>
-                        <div className="video-tags">
-                            <div className="tags-and-more">
+                        <div className="video-tags row">
+                            <div className="tags-and-more pull-left">
                                 <div className="tags">
                                     <a href="#">#easy</a>
                                     <a href="#">#not_easy</a>
                                     <a href="#">#hard</a>
                                     <a href="#">
-                                        <i className="fa fa-plus-circle" aria-hidden="true"></i>
+                                        <img src="img/plus-circle.png" />
                                     </a>
                                 </div>
-                                <div className="video-show-more">show more</div>
+                                <a href="#"><div className="video-show-more">show more</div></a>
                             </div>
-                            <div className="video-share">
+                            <div className="video-share pull-right">
                                 <a href="#">
                                     <i className="fa fa-share-alt" aria-hidden="true"></i>Share</a>
                                 <a href="#">
@@ -98,11 +98,12 @@ const Leftcontent = React.createClass({
                                 <a href="#">@mothermilk</a>
                                 New Ideas For A Low Cost Vacation On Water
                             </div>
+                            <div className="video-add-comment">
+                                <a href="#">Add comment</a>
+                                <div>0/500</div>
+                            </div>
                         </div>
-                        <div className="video-add-comment">
-                            <a href="#">Add comment</a>
-                            <div>0/500</div>
-                        </div>
+
                     </div>
 
                     <div className="video-answwers">
