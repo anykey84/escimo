@@ -86,32 +86,32 @@ const Leftcontent = React.createClass({
                             <div className="video-comment">
                                 serpukin
                                 <a href="#">#easy</a>
-                                Deciphering Marketing Lingo For Small Business Owners
+                                <p>Deciphering Marketing Lingo For Small Business Owners</p>
                             </div>
                             <div className="video-comment">
                                 mothermilk
                                 <a href="#">@serpukin</a>
-                                Enlightenment Is Not Just One State
+                                <p>Enlightenment Is Not Just One State</p>
                             </div>
                             <div className="video-comment">
                                 serpukin
                                 <a href="#">@mothermilk</a>
-                                New Ideas For A Low Cost Vacation On Water
+                                <p>New Ideas For A Low Cost Vacation On Water</p>
                             </div>
-                            <div className="video-add-comment">
-                                <a href="#">Add comment</a>
-                                <div>0/500</div>
+                            <div className="video-add-comment row">
+                                <a href="#" className="pull-left">Add comment</a>
+                                <div className="pull-right">0/500</div>
                             </div>
                         </div>
 
                     </div>
 
-                    <div className="video-answwers">
-                        <div className="video-box">
-                            <iframe className="visible" width="729px" height="410px" src="https://www.youtube.com/embed/5bEFE6Mw-fM?controls=0" frameborder="0" allowfullscreen></iframe>
+                    <div className="video-answwers row">
+                        <div className="video-box col-md-6">
+                            <iframe className="visible" width="100%" height="400px" src="https://www.youtube.com/embed/5bEFE6Mw-fM?controls=0" frameborder="0" allowfullscreen></iframe>
                         </div>
-                        <div className="video-box">
-                            <iframe className="visible" width="729px" height="410px" src="https://www.youtube.com/embed/0zyz0ktjUrI?controls=0" frameborder="0" allowfullscreen></iframe>
+                        <div className="video-box col-md-6">
+                            <iframe className="visible" width="100%" height="400px" src="https://www.youtube.com/embed/0zyz0ktjUrI?controls=0" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
