@@ -2,14 +2,17 @@
 /* ========================================================================
    Custom fonts
  ========================================================================== */
-@import "sf-webfont.less"; ///////////////////////   Variables ////////////////////////////////////////
+@import "sf-webfont.less";
+/* ========================================================================
+   variables
+ ========================================================================== */
 @color-blue: #4a90e2;
 @color-grey: #67687a;
 @color-blue-url: #4a90e2;
 @color-light-grey: #efefef;
 @color-grey-line: rgba(151, 151, 151, 0.2);
 @grey-button-border: #979797;
-@grey-text-light: #9cafc3; ////////////////////////////////////////////////////////////////////////////
+@grey-text-light: #9cafc3;
 /* ========================================================================
    Custom styles
  ========================================================================== */
@@ -148,6 +151,7 @@ header {
         border-right: solid 1px @color-grey-line;
         padding-left: 0;
         padding-right: 0;
+        padding-bottom: 60px;
 
         & > * {
             margin-right: 24px;
@@ -233,38 +237,44 @@ header {
                 .video-tags {
                     padding: 37px 28px 0 38px;
                     margin: 0;
-                    .tags-and-more{
-                      .tags{
-                        a{
-                          font-size: 16px;
-                          color: @color-grey;
-                          margin-right: 8px;
-                          img{
-                            margin-left: 21px;
-                            width: 17px;
-                            height: 17px;
-                          }
-                        }
-                      }
-                      .video-show-more{
-                        font-weight: 100;
-                        color: @grey-text-light;
-                      }
 
+                    .tags-and-more {
+                        .tags {
+                            a {
+                                font-size: 16px;
+                                color: @color-grey;
+                                margin-right: 8px;
+
+                                img {
+                                    margin-left: 21px;
+                                    width: 17px;
+                                    height: 17px;
+                                }
+                            }
+                        }
+
+                        .video-show-more {
+                            font-weight: 100;
+                            color: @grey-text-light;
+                        }
                     }
-                    .video-share{
-                      padding-right: 22px;
-                      a{
-                        color: @color-grey;
-                        font-size: 18px;
-                        font-weight: 100;
-                        &:first-child{
-                          margin-right: 24px;
+
+                    .video-share {
+                        padding-right: 22px;
+
+                        a {
+                            color: @color-grey;
+                            font-size: 18px;
+                            font-weight: 100;
+
+                            &:first-child {
+                                margin-right: 24px;
+                            }
+
+                            .fa {
+                                margin-right: 15px;
+                            }
                         }
-                        .fa{
-                          margin-right: 15px;
-                        }
-                      }
                     }
                 }
 
@@ -272,50 +282,58 @@ header {
                     padding: 40px 28px 31px 38px;
                     margin-bottom: 41px;
 
-                    & > a{
-                      color: @color-grey;
-                      font-size: 14px;
-                      margin-bottom: 22px;
-                      display: inline-block;
+                    & > a {
+                        color: @color-grey;
+                        font-size: 14px;
+                        margin-bottom: 22px;
+                        display: inline-block;
                     }
-                    .video-comment{
-                      font-weight: bold;
-                      margin-bottom: 10px;
-                      a{
-                        font-size: 16px;
-                        color: @grey-text-light;
-                        font-weight: normal;
-                        margin-left: 9px;
-                      }
-                      p{
-                        display: inline;
-                        font-weight: normal;
-                        margin-left: 9px;
-                        color: @color-grey;
-                      }
+
+                    .video-comment {
+                        font-weight: bold;
+                        margin-bottom: 10px;
+
+                        a {
+                            font-size: 16px;
+                            color: @grey-text-light;
+                            font-weight: normal;
+                            margin-left: 9px;
+                        }
+
+                        p {
+                            display: inline;
+                            font-weight: normal;
+                            margin-left: 9px;
+                            color: @color-grey;
+                        }
                     }
-                    .video-add-comment{
-                      margin: 60px 0 0;
-                      a{
-                        font-weight: 100;
-                        font-size: 16px;
-                        color: @color-grey;
-                      }
-                      div{
-                        color: @color-grey;
-                        margin-right: 70px;
-                      }
+
+                    .video-add-comment {
+                        margin: 60px 0 0;
+
+                        a {
+                            font-weight: 100;
+                            font-size: 16px;
+                            color: @color-grey;
+                        }
+
+                        div {
+                            color: @color-grey;
+                            margin-right: 70px;
+                        }
                     }
                 }
             }
-            .video-answwers{
-              .video-box{
-                overflow: hidden;
-                text-align: center;
-                iframe{
-                  border-radius: 5px;
+
+            .video-answwers {
+                .video-box {
+                    overflow: hidden;
+                    text-align: center;
+
+                    iframe {
+                        border-radius: 5px;
+                    }
                 }
-              }
             }
         }
     }
@@ -404,5 +422,43 @@ header {
                 }
             }
         }
+    }
+}
+
+footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    .logo {
+        div:first-child {
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 20px;
+            color: @color-blue;
+        }
+
+        div:last-child {
+            font-size: 12px;
+            color: @color-grey;
+
+            p {
+                display: inline;
+                margin-top: 2px;
+                margin-bottom: 0;
+                margin-right: 5.5px;
+            }
+        }
+    }
+    .bottom-menu{
+      li{
+        display: inline-block;
+        margin-right: 54px;
+        a{
+          color: @grey-text-light;
+        }
+        .copyright{
+          color: @color-grey;
+        }
+      }
     }
 }

@@ -214,17 +214,17 @@ const Maincontent = React.createClass({
 const Footer = React.createClass({
     render: function() {
         return (
-            <footer>
-                <div className="container flex-between-center">
-                    <div className="logo">
-                        <div>Escimo</div>
-                        <div className="flex-between">
-                            <p>ask</p>
-                            <p>me</p>
-                            <p>more</p>
-                        </div>
-                    </div>
-                    <ul>
+            <footer className="container">
+                <div className="row">
+                  <div className="logo col-md-2">
+                      <div>Escimo</div>
+                      <div>
+                          <p>ask</p>
+                          <p>me</p>
+                          <p>more</p>
+                      </div>
+                  </div>
+                    <ul className="bottom-menu col-md-6">
                         <li>
                             <a href="#">Contact</a>
                         </li>
@@ -238,7 +238,9 @@ const Footer = React.createClass({
                             <a href="#">Blog</a>
                         </li>
                     </ul>
+                    <div className="copyright col-md-4 pull-right">Copyright © 2016, Escimo. All rights reserved.</div>
                 </div>
+
             </footer>
         )
     }
@@ -251,6 +253,7 @@ const App = React.createClass({
                 <Header/>
                 <hr/>
                 <Maincontent/>
+                <hr/>
                 <Footer/>
             </div>
         );

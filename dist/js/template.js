@@ -40,13 +40,13 @@ var Maincontent = React.createClass({ displayName: "Maincontent",
 
 var Footer = React.createClass({ displayName: "Footer",
     render: function render() {
-        return React.createElement("footer", null, React.createElement("div", { className: "container flex-between-center" }, React.createElement("div", { className: "logo" }, React.createElement("div", null, "Escimo"), React.createElement("div", { className: "flex-between" }, React.createElement("p", null, "ask"), React.createElement("p", null, "me"), React.createElement("p", null, "more"))), React.createElement("ul", null, React.createElement("li", null, React.createElement("a", { href: "#" }, "Contact")), React.createElement("li", null, React.createElement("a", { href: "#" }, "About US")), React.createElement("li", null, React.createElement("a", { href: "#" }, "Press")), React.createElement("li", null, React.createElement("a", { href: "#" }, "Blog")))));
+        return React.createElement("footer", { className: "container" }, React.createElement("div", { className: "row" }, React.createElement("div", { className: "logo col-md-2" }, React.createElement("div", null, "Escimo"), React.createElement("div", null, React.createElement("p", null, "ask"), React.createElement("p", null, "me"), React.createElement("p", null, "more"))), React.createElement("ul", { className: "bottom-menu col-md-6" }, React.createElement("li", null, React.createElement("a", { href: "#" }, "Contact")), React.createElement("li", null, React.createElement("a", { href: "#" }, "About US")), React.createElement("li", null, React.createElement("a", { href: "#" }, "Press")), React.createElement("li", null, React.createElement("a", { href: "#" }, "Blog"))), React.createElement("div", { className: "copyright col-md-4 pull-right" }, "Copyright © 2016, Escimo. All rights reserved.")));
     }
 });
 
 var App = React.createClass({ displayName: "App",
     render: function render() {
-        return React.createElement("div", null, React.createElement(Header, null), React.createElement("hr", null), React.createElement(Maincontent, null), React.createElement(Footer, null));
+        return React.createElement("div", null, React.createElement(Header, null), React.createElement("hr", null), React.createElement(Maincontent, null), React.createElement("hr", null), React.createElement(Footer, null));
     }
 });
 
